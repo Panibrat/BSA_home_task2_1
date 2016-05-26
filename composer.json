@@ -1,0 +1,15 @@
+{
+  "name": "m1x0n/academy-lection-one",
+  "description": "Files for the first task",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Alexander Panibratenko",
+      "email": "a.panibratenko@gmail.com"
+    }
+  ],
+  "autoload": {
+    "classmap": ["src/"]
+  }
+}
