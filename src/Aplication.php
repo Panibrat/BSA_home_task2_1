@@ -2,16 +2,17 @@
 class Aplication {
     public function showMenu(){
         echo PHP_EOL . 
-              "Make your choise:" . PHP_EOL
-            . "1 => show state" . PHP_EOL
-            . "2 => go lift to floor number" . PHP_EOL
-            . "3 => add people" . PHP_EOL
-            . "4 => take away people" . PHP_EOL
-            . "any other key => to exit programm" . PHP_EOL;
+              "Make your choice:" . PHP_EOL
+            . "Press '1' => show state" . PHP_EOL
+            . "Press '2' => go lift to floor number" . PHP_EOL
+            . "Press '3' => add people" . PHP_EOL
+            . "Press '4' => take away people" . PHP_EOL
+            . "Press any other button => to exit program3"
+                . "" . PHP_EOL;
     }
     public function run() {
         $lift = new Lift();
-        echo "Elevator is ready". PHP_EOL;
+        echo "Lift is ready". PHP_EOL;
         $choice = 1;
         while($choice != 0){
             $this->showMenu();
