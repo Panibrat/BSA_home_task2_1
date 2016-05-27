@@ -5,13 +5,19 @@ class Lift {
     private $floorNumber = 1;
     private $readyToGo = true;
     
-    public function addPeople($add) {
+    public function addPeople() {
+        echo "How may people to add?" . PHP_EOL;
+        $add = intval(fgets(STDIN));
         $this->numOfPeople += $add;
     }      
-    public function outPeople($out) {
+    public function outPeople() {
+        echo "How may people to take away?" . PHP_EOL;
+        $out = intval(fgets(STDIN));
         $this->numOfPeople -= $out;
     }      
-    public function goToFloor($floor) {
+    public function goToFloor() {
+        echo "Which floor?" . PHP_EOL;
+        $floor = intval(fgets(STDIN));
         $this->floorNumber = $floor;
     }      
     public function showStatus() {

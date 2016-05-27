@@ -9,8 +9,7 @@ class Aplication {
             . "4 => take away people" . PHP_EOL
             . "any other key => to exit programm" . PHP_EOL;
     }
-    public function run()
-    {
+    public function run() {
         $lift = new Lift();
         echo "Elevator is ready". PHP_EOL;
         $choice = 1;
@@ -22,19 +21,13 @@ class Aplication {
                     $lift->showStatus();
                     break;
                 case 2: 
-                    echo "Which floor?" . PHP_EOL;
-                    $floor = intval(fgets(STDIN));
-                    $lift->goToFloor($floor);
+                    $lift->goToFloor();
                     break;
                 case 3: 
-                    echo "How may people to add?" . PHP_EOL;
-                    $add = intval(fgets(STDIN));
-                    $lift->addPeople($add);
+                    $lift->addPeople();
                     break;
                 case 4: 
-                    echo "How may people to take away?" . PHP_EOL;
-                    $out = intval(fgets(STDIN));
-                    $lift->outPeople($out);
+                    $lift->outPeople();
                     break;
             }
         }
