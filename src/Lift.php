@@ -32,7 +32,7 @@ class Lift {
             $this->readyToGo = true;
         } else {
             $this->readyToGo = false;
-            echo "ERROR. Lift is overloaded". PHP_EOL;
+            echo "ERROR. Lift overloaded". PHP_EOL;
             return false;
         }
         if (0 < $floor && $floor< 10){
