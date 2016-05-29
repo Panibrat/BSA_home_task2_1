@@ -1,8 +1,11 @@
 <?php
 
 class Lift {
+    const MAX_PEOPLE = 4;
+    const MAX_FLOOR = 9;
+    const MIN_FLOOR = 1;
     private $numOfPeople = 0;
-    private $floorNumber = 1;
+    private $floorNumber = self::MIN_FLOOR;
     private $readyToGo = true;
     
     public function addPeople() {
@@ -28,18 +31,19 @@ class Lift {
         }
     }      
     public function isReadyToGo($floor) {
-        if ($this->numOfPeople < 5){
+        if ($this->numOfPeople <= self::MAX_PEOPLE){
             $this->readyToGo = true;
         } else {
             $this->readyToGo = false;
             echo "ERROR. Lift overloaded". PHP_EOL;
             return false;
         }
-        if (0 < $floor && $floor< 10){
+        if (self::MIN_FLOOR <= $floor && $floor <= self::MAX_FLOOR){
             $this->readyToGo = true;
         } else {
             $this->readyToGo = false;
-            echo "ERROR. Please choice floor number from 1 to 9". PHP_EOL;
+            echo "ERROR. Please choice floor number "
+            . "from " . self::MIN_FLOOR . " to " . self::MAX_FLOOR. PHP_EOL;
             return false;
         }
     }      

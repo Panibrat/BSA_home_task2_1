@@ -1,5 +1,5 @@
 <?php
-class Aplication {
+class  Aplication {
     public function showMenu(){
         echo  "Make your choice:" . PHP_EOL
             . "Press '1' => show state" . PHP_EOL
